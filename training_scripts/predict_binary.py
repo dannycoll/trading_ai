@@ -1,13 +1,16 @@
 import os
 import numpy as np
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
-from keras.models import Sequential, load_model
+from keras.models import Sequential, load_model, model_from_json
 
 img_width, img_height = 150, 150
 #load in the model
-model_path = './models/model'
-weights_path = './models/weights'
-model = load_model(model_path)
+#model_path = './models/model'
+#weights_path = './models/weights'
+json_file = open('model.json', 'r')
+loaded_model_json = json_file.read()
+json_file.close()
+model = model_from_json(loaded_model_json)
 
 data_path = './data/validate'
 
