@@ -7,12 +7,12 @@ img_width, img_height = 150, 150
 #load in the model
 #model_path = './models/model'
 #weights_path = './models/weights'
-json_file = open('model.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-model = model_from_json(loaded_model_json)
+#json_file = open('model.json', 'r')
+#loaded_model_json = json_file.read()
+#json_file.close()
+model = load_model('C:/Users/dptc9/trading_ai/models/model.h5')
 
-data_path = './data/validate'
+data_path = 'C:/Users/dptc9/trading_ai/data/validate'
 
 #print model details
 model.summary()

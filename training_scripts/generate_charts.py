@@ -14,7 +14,7 @@ sell_dir = './data/train/sell/'
 
 comp_ratios = []
 
-def graphwerk(start, finish):
+def graphwerk(pd, start, finish):
     #initialise variables
     open = []
     high = []

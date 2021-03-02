@@ -22,7 +22,7 @@ test_dir = validation_dir
 
 #determine num. of epochs & batch size
 batch_size = 20
-epochs = 50
+epochs = 100
 
 #rescale images to be arrays of numbers between 0 & 1
 train_datagen = ImageDataGenerator(
@@ -75,7 +75,7 @@ history = model.fit_generator(
       shuffle=True)
 
 #save the model & weights
-model.save('./models/model')
+model.save('./models/model.h5')
 model.save_weights('./models/weights')
 
 #plot the metrics of the model training
